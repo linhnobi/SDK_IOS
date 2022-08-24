@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController" customModule="MobioSDKSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="b4H-mt-N0N" id="xJD-2T-Fqd"/>
+                <outlet property="view" destination="dVC-rG-Mzv" id="q9e-vX-Vkr"/>
+                <outletCollection property="starButtonArray" destination="0Mz-7U-tXs" collectionClass="NSMutableArray" id="oFC-pv-Lfw"/>
+                <outletCollection property="starButtonArray" destination="rdJ-sL-qNZ" collectionClass="NSMutableArray" id="Dal-XI-LeA"/>
+                <outletCollection property="starButtonArray" destination="Cvv-ed-FAT" collectionClass="NSMutableArray" id="cLn-RY-Ote"/>
+                <outletCollection property="starButtonArray" destination="nYo-Cn-Qel" collectionClass="NSMutableArray" id="Qhr-F6-sLd"/>
+                <outletCollection property="starButtonArray" destination="XEK-y2-Ttk" collectionClass="NSMutableArray" id="fHZ-Tf-4nn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dVC-rG-Mzv">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mon-ngon-moi-ngay" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-mt-N0N">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CVR-JL-n34">
+                    <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mz-7U-tXs">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="ratingAction:" destination="-1" eventType="touchUpInside" id="Chw-Pa-4Ys"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-sL-qNZ">
+                            <rect key="frame" x="83" y="0.0" width="82.5" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="ratingAction:" destination="-1" eventType="touchUpInside" id="tHI-Cr-18f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvv-ed-FAT">
+                            <rect key="frame" x="165.5" y="0.0" width="83" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="ratingAction:" destination="-1" eventType="touchUpInside" id="GIV-LS-wqB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-Cn-Qel">
+                            <rect key="frame" x="248.5" y="0.0" width="82.5" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="ratingAction:" destination="-1" eventType="touchUpInside" id="seh-eC-6HR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEK-y2-Ttk">
+                            <rect key="frame" x="331" y="0.0" width="83" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="ratingAction:" destination="-1" eventType="touchUpInside" id="gpw-XP-kZJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="nYo-Cn-Qel" firstAttribute="top" secondItem="Cvv-ed-FAT" secondAttribute="top" id="A6x-2u-vO8"/>
+                        <constraint firstItem="nYo-Cn-Qel" firstAttribute="bottom" secondItem="Cvv-ed-FAT" secondAttribute="bottom" id="AUb-mW-WaL"/>
+                        <constraint firstItem="rdJ-sL-qNZ" firstAttribute="bottom" secondItem="0Mz-7U-tXs" secondAttribute="bottom" id="MtY-xy-U8k"/>
+                        <constraint firstItem="XEK-y2-Ttk" firstAttribute="bottom" secondItem="nYo-Cn-Qel" secondAttribute="bottom" id="NyV-MA-1YH"/>
+                        <constraint firstAttribute="height" constant="60" id="OGG-79-GaH"/>
+                        <constraint firstItem="XEK-y2-Ttk" firstAttribute="top" secondItem="nYo-Cn-Qel" secondAttribute="top" id="Xur-Iw-PLA"/>
+                        <constraint firstItem="rdJ-sL-qNZ" firstAttribute="top" secondItem="0Mz-7U-tXs" secondAttribute="top" id="bof-mP-TBK"/>
+                        <constraint firstItem="Cvv-ed-FAT" firstAttribute="top" secondItem="rdJ-sL-qNZ" secondAttribute="top" id="c4U-GB-ATr"/>
+                        <constraint firstAttribute="bottom" secondItem="0Mz-7U-tXs" secondAttribute="bottom" id="c6G-dq-0ZN"/>
+                        <constraint firstItem="0Mz-7U-tXs" firstAttribute="top" secondItem="CVR-JL-n34" secondAttribute="top" id="lBv-Hz-K4P"/>
+                        <constraint firstItem="Cvv-ed-FAT" firstAttribute="bottom" secondItem="rdJ-sL-qNZ" secondAttribute="bottom" id="wwM-g7-vtY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="oMB-ag-t8e"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CVR-JL-n34" firstAttribute="top" secondItem="b4H-mt-N0N" secondAttribute="bottom" id="1p0-7U-f7O"/>
+                <constraint firstAttribute="bottom" secondItem="CVR-JL-n34" secondAttribute="bottom" id="6hu-Up-bUH"/>
+                <constraint firstItem="b4H-mt-N0N" firstAttribute="leading" secondItem="dVC-rG-Mzv" secondAttribute="leading" id="Gh7-li-3vg"/>
+                <constraint firstItem="b4H-mt-N0N" firstAttribute="top" secondItem="dVC-rG-Mzv" secondAttribute="top" id="JhQ-wU-8lZ"/>
+                <constraint firstAttribute="trailing" secondItem="b4H-mt-N0N" secondAttribute="trailing" id="ScB-FP-Yjz"/>
+                <constraint firstItem="b4H-mt-N0N" firstAttribute="leading" secondItem="CVR-JL-n34" secondAttribute="leading" id="VAs-ab-4Zf"/>
+                <constraint firstAttribute="trailing" secondItem="CVR-JL-n34" secondAttribute="trailing" id="sSy-ad-d0U"/>
+            </constraints>
+            <point key="canvasLocation" x="77" y="-554"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mon-ngon-moi-ngay" width="325" height="325"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

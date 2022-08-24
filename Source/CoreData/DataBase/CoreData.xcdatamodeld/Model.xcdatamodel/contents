@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChildrenNode" representedClassName="ChildrenNode" syncable="YES">
+        <attribute name="complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="expire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="childrenNode" inverseEntity="Event"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="eventData" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="eventKey" optional="YES" attributeType="String"/>
+        <attribute name="nodeID" optional="YES" attributeType="String"/>
+        <relationship name="childrenNode" toMany="YES" deletionRule="Nullify" destinationEntity="ChildrenNode" inverseName="event" inverseEntity="ChildrenNode"/>
+    </entity>
+    <entity name="FailAPI" representedClassName="FailAPI" syncable="YES">
+        <attribute name="event" optional="YES" attributeType="String"/>
+        <attribute name="params" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="urlString" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NotiResponse" representedClassName="NotiResponse" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="data" optional="YES" attributeType="String"/>
+        <attribute name="desScreen" optional="YES" attributeType="String"/>
+        <attribute name="sourceScreen" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="push" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Push" inverseName="notiResponse" inverseEntity="Push"/>
+    </entity>
+    <entity name="Push" representedClassName="Push" syncable="YES">
+        <attribute name="expire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nodeID" optional="YES" attributeType="String"/>
+        <attribute name="prepareShow" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="showed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="notiResponse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NotiResponse" inverseName="push" inverseEntity="NotiResponse"/>
+    </entity>
+    <elements>
+        <element name="ChildrenNode" positionX="-63" positionY="27" width="128" height="104"/>
+        <element name="Event" positionX="-117.80859375" positionY="-305.46875" width="128" height="89"/>
+        <element name="FailAPI" positionX="-189" positionY="-171" width="128" height="89"/>
+        <element name="NotiResponse" positionX="-314.7265625" positionY="-6.94140625" width="128" height="134"/>
+        <element name="Push" positionX="-321.29296875" positionY="-333.90625" width="128" height="134"/>
+    </elements>
+</model>
