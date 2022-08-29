@@ -65,13 +65,16 @@ extension MobioRemoteNotification: MobioRemoteNotificationType {
             if let popupData = remoteNotificationData.data {
                 WebPopupStatusManager.pushDataStatusPopup(popupData: popupData, statusCase: .receive(.normal))
             }
+            completionHandler([.alert, .badge, .sound])
         } else if state == .active || state == .inactive {
             if let popupData = remoteNotificationData.data {
                 WebPopupStatusManager.pushDataStatusPopup(popupData: popupData, statusCase: .receive(.popup))
             }
             viewModel.decideShowPopup(remoteNotificationData: remoteNotificationData)
+            if remoteNotificationData.alert?.contentType != "html" &&  remoteNotificationData.alert?.contentType != "popup" {
+                completionHandler([.alert, .badge, .sound])
+            }
         }
-        completionHandler([.alert, .badge, .sound])
         MobioSDK.shared.configuration.setupTrackable(remoteNotificationData.alert?.status)
     }
     

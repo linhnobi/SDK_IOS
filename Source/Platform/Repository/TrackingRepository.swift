@@ -46,7 +46,6 @@ extension TrackingRepository: TrackingRepositoryType {
             oldEventDictionaryArray.append(contentsOf: newEventDictionaryArray)
             oldTrackDictionary["events"] = oldEventDictionaryArray
             oldFailAPI.params = ["track": oldTrackDictionary]
-            DictionaryPrinter.printBeauty(with: oldFailAPI.params)
         }
         else {
             super.createFailApi(input: input)

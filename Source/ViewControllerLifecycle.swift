@@ -158,7 +158,7 @@ extension ViewControllerLifeCycleBehavior {
                         "screen_name": screenView[0].title,
                     ]
                     // MARK: - To do: send event traits
-                    NotificationCenter.default.post(name: .sendEvent, object: traits)
+//                    NotificationCenter.default.post(name: .sendEvent, object: traits)
                     trackingRepository.getTrackingData(event: "sdk_mobile_time_visit_app", properties: traits, type: .timeVisit)
                 }
                 if countTime == timeConfig[timeConfig.count - 1] {

@@ -39,9 +39,11 @@ public class MobioNotificationServiceExtension: MobioNotificationServiceExtensio
     }
     
     func loadAttachment(forUrlString urlString: String?, withType mediaType: String?, completionHandler: @escaping (UNNotificationAttachment?) -> Void) {
-        
+        guard let urlString = urlString else {
+            return
+        }
         var attachment: UNNotificationAttachment? = nil
-        let attachmentURL = URL(string: urlString ?? "")
+        let attachmentURL = URL(string: urlString)
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         if let attachmentURL = attachmentURL {

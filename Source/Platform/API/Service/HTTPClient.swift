@@ -38,7 +38,6 @@ public class HTTPClient {
         }
         
         func callApi(input: ServiceBaseRequest, counter: Int = 0) {
-            print("------- debug ------ Retry --- event = \(input.event) = ", counter)
             let params = input.params
             let event = input.event
             
@@ -73,10 +72,8 @@ public class HTTPClient {
                     print("------ debug ------ retry ----- 200")
                     completion(result, nil)
                 } else {
-                    print("------ debug ------ retry ----- erro")
-
+                    print("------ debug ------ retry ----- error code = ", statusCode)
                     let baseError = BaseError.httpError(httpCode: statusCode)
-                    print("------------- Base Error ------- ", baseError.errorMessage ?? "no error")
                     startRetry(input: input, counter: counter, error: baseError)
                 }
                 print("------------ END Response --------")

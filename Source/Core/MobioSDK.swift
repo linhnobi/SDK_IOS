@@ -18,20 +18,17 @@ import UserNotifications
     public typealias Dictionary = [String : Any]
     
     // MARK: - Property
-    @available(iOSApplicationExtension, unavailable)
     public static let shared = MobioSDK()
     var iOSlife = iOSLifecycleMonitor()
     let trackingManager = TrackingManager()
     let screenSettingManager = ScreenSettingManager()
-    @available(iOSApplicationExtension, unavailable)
     let mobioRemoteNotification = MobioRemoteNotification()
     var apiRecallManager = APIRecallManager.shared
     let notificationRepository = NotificationRepository(api: HTTPClient.shared)
     let connectionManager = ConnectionManager.shared
     var configuration = Configuration()
-
-    @available(iOSApplicationExtension, unavailable)
-    public override init() {
+    
+    private override init() {
         super.init()
         iOSlife.setupListeners()
         setupRemoteNotification()
@@ -53,7 +50,6 @@ import UserNotifications
         self.configuration.delegate = self
     }
     
-    @available(iOSApplicationExtension, unavailable)
     private func setupRemoteNotification() {
         mobioRemoteNotification.registerForPushNotifications()
         let remoteNotificationViewModel = RemoteNotificationViewModel()

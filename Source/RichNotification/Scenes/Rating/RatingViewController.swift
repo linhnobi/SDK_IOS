@@ -73,7 +73,6 @@ final class RatingViewController: UIViewController {
     // MARK: - Action
     @IBAction func ratingAction(_ sender: UIButton) {
         changeStateButton(button: sender)
-        print("------ RatingViewController ------ rating star = ", sender.tag + 1)
     }
     
     private func changeStateButton(button: UIButton) {

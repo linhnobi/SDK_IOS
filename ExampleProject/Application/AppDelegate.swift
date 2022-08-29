@@ -45,6 +45,5 @@ extension AppDelegate: UIApplicationDelegate {
         let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
         let token = tokenParts.joined()
         analytics.send(deviceToken: token)
-        print("----- debug ----- token = ", token)
     }
 }

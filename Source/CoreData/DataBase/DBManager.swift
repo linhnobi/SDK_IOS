@@ -39,7 +39,6 @@ public protocol DBManagerType {
         do {
             try viewContext.save()
         } catch let error as NSError {
-            print("---- debug ---- save core data error = ", error)
         }
     }
     

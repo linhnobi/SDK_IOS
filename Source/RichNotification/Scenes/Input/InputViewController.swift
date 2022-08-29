@@ -43,7 +43,6 @@ final class InputViewController: UIViewController {
     }
     
     private func handleMessage(data: String) {
-        print("------ debug ------ data = ", data)
     }
 }
 

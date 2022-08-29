@@ -49,18 +49,4 @@ open class MobioNotificationContentExtension: UIViewController, UNNotificationCo
                            completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
         completion(viewController.handleAction(response: response))
     }
-    
-    open override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("----- debug ---- MobioNotificationContentExtension -------  viewDidAppear -----")
-    }
-    
-    open override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("----- debug ---- MobioNotificationContentExtension -------  viewDidDisappear -----")
-    }
-    
-    deinit {
-        print("----- debug ---- MobioNotificationContentExtension -------  deinit -----")
-    }
 }

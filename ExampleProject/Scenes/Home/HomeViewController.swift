@@ -35,7 +35,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func deeplinkAction(_ sender: Any) {
-//        analytics.deeplink(with: "AccountViewController")
+        analytics.deeplink(with: "AccountViewController")
     }
     
     @IBAction func recallApiAction(_ sender: Any) {
@@ -43,8 +43,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func makeFailApiAction(_ sender: Any) {
-//        let failAPI = FailAPI(urlString: "url string 1", event: "event 1", params: [String : Any](), type: "type 1")
-//        print("------ debug ----- fail api = ", failAPI)
+        let failAPI = FailAPI(urlString: "url string 1", event: "event 1", params: [String : Any](), type: "type 1")
     }
     
     @IBAction func trackAction(_ sender: Any) {

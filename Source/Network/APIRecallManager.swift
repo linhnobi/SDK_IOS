@@ -18,9 +18,7 @@ public struct APIRecallManager {
     let semaphore = DispatchSemaphore(value: 1)
     let group = DispatchGroup()
     
-    private init() {
-        print("-------- debug ------ APIRecallManager init")
-    }
+    private init() { }
     
     public func fetchFailApi() {
         apiRecallQueue.async(flags: .barrier) {
@@ -45,7 +43,6 @@ public struct APIRecallManager {
                     return nil
                 }
             }
-        print("----- debug ------ failApiList = ", failApiList)
         return failApiList
     }
     
@@ -56,14 +53,12 @@ public struct APIRecallManager {
                 defer {
                     group.leave()
                 }
-                print("------- debug ------- start recall -------")
                 if recallApiResult == .success {
                     failApiRepository.delete(object: failApi)
                 }
             }
         }
         group.notify(queue: .main) {
-            print("----- debug ----- Group done")
             complete()
         }
     }

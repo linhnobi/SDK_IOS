@@ -72,7 +72,6 @@ import Foundation
     @discardableResult
     public func setupTrackable(_ value: Bool?) -> Configuration {
         self.trackable = value ?? true
-        print("------ debug ------- trackable = ", trackable)
         delegate?.trackableDidSet(value: trackable)
         return self
     }
